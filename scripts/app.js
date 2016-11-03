@@ -39,6 +39,9 @@ $(document).ready(function() {
       userInput.push(input);
       console.log('A8.4');
     }
+    else if(input === "(" && userInput[userInput.length-1] === "(") {
+      userInput.push(input)
+    }
     else if(input === ")" && numbers.includes(Number(userInput[userInput.length-1]))) {
       userInput.push(input);
       console.log('A8.3');
