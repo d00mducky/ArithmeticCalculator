@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+  <!-- My Style Sheet -->
+  <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+</head>
+<body ng-app="Calculator" ng-controller="calcController">
+  <div class="calcBody col-md-4">
+    <h1>Calculator</h1>
+    <div class="calcResultRow">
+      <input class="form-control" type="text" placeholder="I <3 Math…" readonly>
+    </div>
+    <br>
+    <div class="calcButtonRows">
+      <div class="buttonRowOne">
+        <input class="btn btn-default" type="button" value="Input">
+        <input class="btn btn-default" type="button" value="Input">
+        <input class="btn btn-default" type="button" value="Input">
+        <input class="btn btn-default" type="button" value="Input">
+      </div>
+      <br>
+      <div class="buttonRowTwo">
+        <input class="btn btn-default" type="button" value="Input">
+        <input class="btn btn-default" type="button" value="Input">
+        <input class="btn btn-default" type="button" value="Input">
+        <input class="btn btn-default" type="button" value="Input">
+      </div>
+      <br>
+      <div class="buttonRowThree">
+        <input class="btn btn-default" type="button" value="Input">
+        <input class="btn btn-default" type="button" value="Input">
+        <input class="btn btn-default" type="button" value="Input">
+        <input class="btn btn-default" type="button" value="Input">
+      </div>
+      <br>
+      <div class="buttonRowFour">
+        <input class="btn btn-default" type="button" value="Input">
+        <input class="btn btn-default" type="button" value="Input">
+        <input class="btn btn-default" type="button" value="Input">
+        <input class="btn btn-default" type="button" value="Input">
+      </div>
+      <br>
+      <div class="buttonRowFive ">
+        <input class="btn btn-default" type="button" value="Input">
+        <input class="btn btn-default" type="button" value="Input">
+        <input class="btn btn-default" type="button" value="Input">
+        <input class="btn btn-default" type="button" value="Input">
+      </div>
+      <br>
+    </div>
+  </div>
+</body>
+<!-- // Angular -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<!-- // UI Bootstrap Templates -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.2.0/ui-bootstrap.min.js"></script>
+<!-- // UI Bootstrap -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.2.0/ui-bootstrap-tpls.min.js"></script>
+<!-- JavaScript Code -->
+<script src="app.js"></script>
+</html>
