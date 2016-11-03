@@ -13,48 +13,49 @@
   <div class="calcBody col-md-4">
     <h1>Calculator</h1>
     <div class="calcResultRow">
-      <input class="form-control" type="text" placeholder="I <3 Math…" readonly>
+      <span class="result">I <3 Math...</span>
     </div>
     <br>
     <div class="calcButtonRows">
+          <hr>
       <div class="buttonRowOne">
-        <input class="btn btn-default" type="button" value="Input">
-        <input class="btn btn-default" type="button" value="Input">
-        <input class="btn btn-default" type="button" value="Input">
-        <input class="btn btn-default" type="button" value="Input">
+        <input class="btn btn-default" id="leftP" type="button" value="(">
+        <input class="btn btn-default" id="rightP" type="button" value=")">
+        <input class="btn btn-default" id="exp" type="button" value="^">
+        <input class="btn btn-default" id="clear" type="button" value="Clear">
       </div>
       <br>
       <div class="buttonRowTwo">
-        <input class="btn btn-default" type="button" value="Input">
-        <input class="btn btn-default" type="button" value="Input">
-        <input class="btn btn-default" type="button" value="Input">
-        <input class="btn btn-default" type="button" value="Input">
+        <input class="btn btn-default" id="one" type="button" value="1">
+        <input class="btn btn-default" id="two" type="button" value="2">
+        <input class="btn btn-default" id="three" type="button" value="3">
+        <input class="btn btn-default" id="divide" type="button" value="/">
       </div>
       <br>
       <div class="buttonRowThree">
-        <input class="btn btn-default" type="button" value="Input">
-        <input class="btn btn-default" type="button" value="Input">
-        <input class="btn btn-default" type="button" value="Input">
-        <input class="btn btn-default" type="button" value="Input">
+        <input class="btn btn-default" id="four" type="button" value="4">
+        <input class="btn btn-default" id="five" type="button" value="5">
+        <input class="btn btn-default" id="six" type="button" value="6">
+        <input class="btn btn-default" id="mult" type="button" value="*">
       </div>
       <br>
       <div class="buttonRowFour">
-        <input class="btn btn-default" type="button" value="Input">
-        <input class="btn btn-default" type="button" value="Input">
-        <input class="btn btn-default" type="button" value="Input">
-        <input class="btn btn-default" type="button" value="Input">
+        <input class="btn btn-default" id="seven" type="button" value="7">
+        <input class="btn btn-default" id="eight" type="button" value="8">
+        <input class="btn btn-default" id="nine" type="button" value="9">
+        <input class="btn btn-default" id="minus" type="button" value="-">
       </div>
       <br>
       <div class="buttonRowFive ">
-        <input class="btn btn-default" type="button" value="Input">
-        <input class="btn btn-default" type="button" value="Input">
-        <input class="btn btn-default" type="button" value="Input">
-        <input class="btn btn-default" type="button" value="Input">
+        <input class="btn btn-default" id="zero" style="width:74%" type="button" value="0">
+        <input class="btn btn-default" id="equals" type="button" value="=">
       </div>
       <br>
     </div>
   </div>
 </body>
+<!-- JQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <!-- // Angular -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 <!-- // UI Bootstrap Templates -->

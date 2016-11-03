@@ -1,1 +1,5 @@
-angular.module('Calculator', ['ui.bootstrap']);
+// angular.module('Calculator', ['ui.bootstrap']);
+
+function clearAll () {
+  
+}

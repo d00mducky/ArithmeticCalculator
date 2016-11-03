@@ -1,4 +1,36 @@
+.calcBody {
+  background-color: rgba(128, 128, 128, 0.53);
+  border: .5em solid black;
+}
+
+.calcResultRow {
+  background-color: white;
+  position: relative;
+  margin-bottom: 2em;
+}
+
+.calcResultRow span {
+  position: absolute;
+  right: 6px;
+}
+
+.result {
+  font-size: 24pt;
+  color: white;
+}
+
 .btn-default {
   width: 24%;
   font-size: 18pt;
+  background-color: #e6e6e6;
+}
+
+.btn:focus {
+   outline: none !important;
+   text-decoration: none !important;
+}
+
+.btn:active {
+  outline: none !important;
+  text-decoration: none !important;
 }
