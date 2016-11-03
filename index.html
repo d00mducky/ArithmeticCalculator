@@ -10,52 +10,60 @@
   <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 </head>
 <body>
-  <div class="calcBody col-md-4">
+  <div class="calcBody col-md-8">
     <h1>Calculator</h1>
     <div class="calcResultRow">
-      <span class="result">I <3 Math...</span>
+      <span id="output" class="result">I <3 Math...</span>
     </div>
     <br>
     <div class="calcButtonRows">
           <hr>
-      <div class="buttonRowOne">
-        <input class="btn btn-default" id="leftP" type="button" value="(">
-        <input class="btn btn-default" id="rightP" type="button" value=")">
-        <input class="btn btn-default" id="exp" type="button" value="^">
-        <input class="btn btn-default" id="clear" type="button" value="Clear">
+      <div class="row">
+        <input class="btn btn-default" id="clearAll" type="button" value="AC">
+        <input class="btn btn-default" id="clearLast" type="button" value="CE">
       </div>
       <br>
-      <div class="buttonRowTwo">
-        <input class="btn btn-default" id="one" type="button" value="1">
-        <input class="btn btn-default" id="two" type="button" value="2">
-        <input class="btn btn-default" id="three" type="button" value="3">
-        <input class="btn btn-default" id="divide" type="button" value="/">
+      <div class="row">
+        <input class="btn btn-default" id="(" type="button" value="(">
+        <input class="btn btn-default" id=")" type="button" value=")">
+        <input class="btn btn-default" id="^" type="button" value="^">
+        <input class="btn btn-default" id="+" type="button" value="+">
       </div>
       <br>
-      <div class="buttonRowThree">
-        <input class="btn btn-default" id="four" type="button" value="4">
-        <input class="btn btn-default" id="five" type="button" value="5">
-        <input class="btn btn-default" id="six" type="button" value="6">
-        <input class="btn btn-default" id="mult" type="button" value="*">
+      <div class="row">
+        <input class="btn btn-default" id="1" type="button" value="1">
+        <input class="btn btn-default" id="2" type="button" value="2">
+        <input class="btn btn-default" id="3" type="button" value="3">
+        <input class="btn btn-default" id="/" type="button" value="/">
       </div>
       <br>
-      <div class="buttonRowFour">
-        <input class="btn btn-default" id="seven" type="button" value="7">
-        <input class="btn btn-default" id="eight" type="button" value="8">
-        <input class="btn btn-default" id="nine" type="button" value="9">
-        <input class="btn btn-default" id="minus" type="button" value="-">
+      <div class="row">
+        <input class="btn btn-default" id="4" type="button" value="4">
+        <input class="btn btn-default" id="5" type="button" value="5">
+        <input class="btn btn-default" id="6" type="button" value="6">
+        <input class="btn btn-default" id="*" type="button" value="*">
       </div>
       <br>
-      <div class="buttonRowFive ">
-        <input class="btn btn-default" id="zero" style="width:74%" type="button" value="0">
-        <input class="btn btn-default" id="equals" type="button" value="=">
+      <div class="row">
+        <input class="btn btn-default" id="7" type="button" value="7">
+        <input class="btn btn-default" id="8" type="button" value="8">
+        <input class="btn btn-default" id="9" type="button" value="9">
+        <input class="btn btn-default" id="-" type="button" value="-">
+      </div>
+      <br>
+      <div class="row ">
+        <input class="btn btn-default" id="0" style="width:48.6%" type="button" value="0">
+        <input class="btn btn-default" id="."                     type="button" value=".">
+        <input class="btn btn-default" id="equals"                type="button" value="=">
       </div>
       <br>
     </div>
   </div>
 </body>
-<!-- JQuery -->
+<!-- JQuery-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<!-- JavaScript Code -->
-<script src="app.js"></script>
+<!-- MathJS Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.5.3/math.min.js"></script>
+<!-- My JavaScript Code -->
+<script src="scripts/app.js"></script>
 </html>
