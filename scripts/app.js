@@ -6,9 +6,10 @@ $(document).ready(function() {
   var operators = ["/", "*", "-", "+", "^"];
   var resultString = "";
 
-  function checkElement(input) {
+  function validateItem(input) {
     console.log('1st ', input);
-    if (userInput.length === 1 && operators.includes(input) === false && input !== ")") {
+    // minus sign allowed first
+    if (userInput.length === 1 && ["/", "*", "+", "^"].includes(input) === false && input !== ")") {
       userInput.push(input);
       console.log('A1');
     }
@@ -23,14 +24,24 @@ $(document).ready(function() {
     else if(input === "." && userInput[userInput.length-1] === ".") {
       console.log('A4 error, incorrect use of operator ', userInput[userInput.length-1]);
     }
-
-    else if(input === ")" && numbers.includes(Number(userInput[userInput.length-1]))) {
+    else if(input === "(" && userInput[userInput.length-1] === ".") {
+      console.log('A6 error, incorrect use of paren');
+    }
+    else if(input === "(" && operators.includes(userInput[userInput.length-1])) {
       userInput.push(input);
-      console.log('A8.3');
+      console.log('A8.1');
+    }
+    else if(input === "(" && numbers.includes(Number(userInput[userInput.length-1]))) {
+      userInput.push(input);
+      console.log('A8.2');
     }
     else if(input === "(" && userInput[userInput.length-1] === ")") {
       userInput.push(input);
       console.log('A8.4');
+    }
+    else if(input === ")" && numbers.includes(Number(userInput[userInput.length-1]))) {
+      userInput.push(input);
+      console.log('A8.3');
     }
     else if(input === ")" && userInput[userInput.length-1] === ".") {
       console.log('A7 error, incorrect use of paren');
@@ -38,11 +49,11 @@ $(document).ready(function() {
     else if(input === ")" && userInput[userInput.length-1] === "(") {
       console.log('A7 error, incorrect use of paren');
     }
-    updateOutputString(); // reset output string
+    updateOutput(); // reset output string
     console.log('A5');
   }
 
-  function updateOutputString () {
+  function updateOutput () {
     resultString = userInput.join(""); // build resultString by joining each string element in userInput
     $("#output").html(resultString); // set output string
   }
@@ -62,15 +73,15 @@ $(document).ready(function() {
     }
     else if(this.id === "clearAll") { // if user selects the 'AC' button
       userInput = [""]; // erase userInput
-      updateOutputString(); // reset output string
+      updateOutput(); // reset output string
     }
     else if (this.id === "clearLast") { // if user selects the 'CE' button
       userInput.pop(); // erase last userInput item
-      updateOutputString(); // reset output string
+      updateOutput(); // reset output string
     }
     else { // otherwise, if user selects anything else
       console.log(userInput.length, ' 1');
-      checkElement(this.id); // check this element for potential syntax violations
+      validateItem(this.id); // check this element for potential syntax violations
     }
   });
 });
